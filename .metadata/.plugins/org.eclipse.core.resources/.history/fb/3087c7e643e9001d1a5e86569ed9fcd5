@@ -1,0 +1,11 @@
+package utilities;
+
+import org.openqa.selenium.JavascriptExecutor;
+
+public class CommonFunctions {
+
+	public void scrollWebPage() {
+		JavascriptExecutor js = JavascriptExecutor (driver);
+		js.executeScript("windows.scrollBy(0,389)", null)
+	}
+}

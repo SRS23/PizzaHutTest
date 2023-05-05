@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PizzaHut]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="pizzahut001(failed)">
+    <classes>
+      <class name="stepDefinitions.PizzaHutTestNGTest">
+        <methods>
+          <include name="flushh"/>
+          <include name="websiteLinks"/>
+          <include name="set_the_user_delivery_location_as_lulu_mall_bangalore"/>
+        </methods>
+      </class> <!-- stepDefinitions.PizzaHutTestNGTest -->
+    </classes>
+  </test> <!-- pizzahut001(failed) -->
+</suite> <!-- Failed suite [PizzaHut] -->

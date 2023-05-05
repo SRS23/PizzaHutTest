@@ -1,0 +1,13 @@
+package stepDefinitions;
+
+import io.cucumber.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features = "src\\test\\java\\pizzahutFeaures\\pizzahutOrderPlacing.feature",
+		glue = {"stepDefinitions"}
+		)
+public class TestRunner {
+
+	
+}

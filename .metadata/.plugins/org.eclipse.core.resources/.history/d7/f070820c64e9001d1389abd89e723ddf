@@ -1,0 +1,9 @@
+package constants;
+
+public class Constantss {
+
+	public  static final  String pizzaHutUrl = "https://www.pizzahut.co.in";
+	public static final String exReport = "F:\\svl svs\\My projects\\Phase -2 projects\\Pizza Hut\\PizzaHut\\target\\new\\junitexrepo.html";
+
+	public static final String screenshotLocation = "F:\\svl svs"+Math.random()+".png";
+}

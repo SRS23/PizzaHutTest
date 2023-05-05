@@ -1,0 +1,57 @@
+package utilities;
+import java.io.IOException;
+
+import junit.framework.AssertionFailedError;
+import junit.framework.Test;
+
+public class TestListener extends CommonFunctions implements junit.framework.TestListener {
+ 
+                             
+    CommonFunctions cfs = new CommonFunctions();
+
+	@Override
+	public void addError(Test test, Throwable e) {
+		// TODO Auto-generated method stub
+		try {
+			cfs.takeScreenShot();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+
+	@Override
+	public void addFailure(Test test, AssertionFailedError e) {
+		// TODO Auto-generated method stub
+		try {
+			cfs.takeScreenShot();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+
+	@Override
+	public void endTest(Test test) {
+		// TODO Auto-generated method stub
+		try {
+			cfs.takeScreenShot();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+
+	@Override
+	public void startTest(Test test) {
+		// TODO Auto-generated method stub
+		try {
+			cfs.takeScreenShot();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+    
+  }
+

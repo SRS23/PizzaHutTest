@@ -1,0 +1,231 @@
+package pageFactory;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import java.time.Duration;
+
+import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+import utilities.DriverInit;
+
+public class PizzaHutOrderPlacing {
+	
+	
+	
+	public PizzaHutOrderPlacing(WebDriver driver) {
+		PageFactory.initElements( driver, this);
+	}
+	
+	@FindBy(how = How.XPATH, using = "//input[@placeholder='Enter your location for delivery']")
+	WebElement enterLocation;
+	
+	@FindBy(how = How.XPATH, using = "//button[@data-testid=\"close-offer-collection\"]")
+	WebElement closebutton;
+
+	@FindBy(how = How.XPATH, using = "//button[@class=\"button button--secondary text-center\"]")
+	WebElement startYourOrder;
+	
+	//button[@data-synth="close-scheduled-orders"]
+	@FindBy(how = How.XPATH, using = "(//span[@class=\"rounded-full bg-white\"])[1]")
+	WebElement radioButton;
+
+	@FindBy(how = How.XPATH, using="//a[@data-synth='link--pizzas--side']") WebElement PizzaMenuBar;
+	
+	@FindBy(how =How.XPATH, using="//button[@data-synth=\"button--corn-&-cheese-pan-medium--one-tap\"]")
+	WebElement cornPizza;
+	
+	
+	
+	@FindBy(how =How.XPATH, using="(//select[@class=\"phdv-dropdown-select bg-grey-lightest p-10 w-full typography-6 bold\"])[26]")WebElement sizeDropdown;
+	
+	@FindBy(how = How.XPATH, using="(//button[@class=\"button button--md button--green flex-1 font-semibold\"])[26]")WebElement CheesyMushroomMagic;
+	
+	
+	
+	
+	@FindBy(how = How.XPATH, using = "(//span[contains(text(),'₹')])[60]")
+ WebElement subtotalElement;
+
+	@FindBy(how = How.XPATH, using = "(//span[contains(text(),'₹')])[61]")
+	 WebElement totalTaxElement;
+
+	@FindBy(how = How.XPATH, using = "(//span[contains(text(),'₹')])[63]")
+	 WebElement basketValueElement;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='display-supplement-value']")
+	WebElement supplementValueElement;
+
+	@FindBy(css = "a[data-synth='link--checkout']")
+	private WebElement checkoutButton;
+
+	//@FindBy(how = How.XPATH using="")WebElement itemsCount;
+	
+	//@FindBy(how = How.XPATH using="")WebElement totalPriceCount;
+	//
+	//@FindBy(how = How.XPATH using="")WebElement drinksOption;
+	//
+	//@FindBy(how = How.XPATH using="")WebElement addPepsi;
+	
+	
+	
+	
+	
+	public void enterDeliverAddress(String text) throws InterruptedException {
+		
+	    enterLocation.sendKeys(text);
+	    WebDriverWait wait = new WebDriverWait(DriverInit.getDriver(), Duration.ofSeconds(10));
+	    WebElement inputField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter your location for delivery']")));
+	    inputField.clear();
+	    inputField.sendKeys(Keys.BACK_SPACE);
+	    inputField.sendKeys(Keys.BACK_SPACE);
+	    for (int i = 0; i < 35; i++) {
+	        inputField.sendKeys(Keys.BACK_SPACE);
+	    }
+	   
+	    WebDriverWait wait1 = new WebDriverWait(DriverInit.getDriver(), Duration.ofSeconds(10));
+	    inputField.sendKeys("lulu mall bangalore");
+	    Thread.sleep(5000);
+	    inputField.sendKeys(Keys.BACK_SPACE);
+	    inputField.sendKeys("e");
+	    Thread.sleep(5000);
+	    inputField.sendKeys(Keys.ENTER);
+	    Thread.sleep(5000);
+	}
+
+	public void closeButton() {
+
+		closebutton.click();
+
+	}
+	//public void startYourOrderButton() {
+
+		//startYourOrder.click();
+
+	//}
+	
+	public void enterDeliverAddresss() throws InterruptedException {
+		
+		    WebDriverWait wait = new WebDriverWait(DriverInit.getDriver(), Duration.ofSeconds(10));
+		    WebElement inputField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter your location for delivery']")));
+		  
+		    inputField.sendKeys(Keys.BACK_SPACE);
+		    inputField.sendKeys(Keys.BACK_SPACE);
+		    for (int i = 0; i < 105; i++) {
+		        inputField.sendKeys(Keys.BACK_SPACE);
+		    }
+		   
+		    WebDriverWait wait1 = new WebDriverWait(DriverInit.getDriver(), Duration.ofSeconds(10));
+		    inputField.sendKeys("Kadapa Railway Station");
+		    inputField.sendKeys(Keys.BACK_SPACE);
+		    inputField.sendKeys(Keys.BACK_SPACE);
+		    inputField.sendKeys("on");
+		    Thread.sleep(10000);
+		    inputField.sendKeys(Keys.ENTER);
+		  
+	}
+
+	public void radioButoonChecking() {
+		if (radioButton.isEnabled()) {
+		    System.out.println("Radio button is enabled");
+		} else {
+		    System.out.println("Radio button is not enabled");
+		    }
+		
+		 boolean isEnabled = radioButton.isEnabled();
+
+		    assertTrue("Radio button is enabled", isEnabled);
+	
+	}
+	
+	public void clickOnPizzaMenu() {
+		
+		PizzaMenuBar.click();
+	}
+	
+	public void addingCornPizza() {
+		
+		cornPizza.click();
+	}
+	
+	public void selectSizeOfPizza() {
+		Select select = new Select(sizeDropdown);
+        select.selectByIndex(5);
+        
+	}
+	public void addingMushroomPiza() {
+
+		CheesyMushroomMagic.click();
+	}
+	
+	
+	public void checkOutPrice() {
+		
+		 double subtotal = Double.parseDouble(subtotalElement.getText().replaceAll("[^\\d.]", ""));
+		 double totalTax = Double.parseDouble(totalTaxElement.getText().replaceAll("[^\\d.]", ""));
+		 double restaurantCharges = Double.parseDouble(supplementValueElement.getText().replaceAll("[^\\d.]", ""));
+		 double expectedBasketValue = subtotal + totalTax + restaurantCharges;
+	     double actualBasketValue = Double.parseDouble(basketValueElement.getText().replaceAll("[^\\d.]", ""));
+		  // add delta value to handle rounding errors
+		 
+		 System.out.println("Sub Total "+subtotal+"  Total Tax "+ totalTax+"  Restauramt Charges "+restaurantCharges);
+       System.out.println("Expected Basket Value is: "+expectedBasketValue);
+       System.out.println("Actual Basket Value "+actualBasketValue);
+       assertEquals(expectedBasketValue, actualBasketValue, 0.001);
+       if(expectedBasketValue == actualBasketValue) {
+		 System.out.println("prices matched.");
+       }
+       else {
+    	   System.out.println("prices not matched.");
+       }
+	}
+		    
+	
+
+	public void verifyCheckoutButtonContainsItemCount() {
+		String itemCount = DriverInit.getDriver().findElement(By.cssSelector(".bg-green-dark")).getText().replaceAll("[^\\d]", "");
+		int expectedItemCount = Integer.parseInt(itemCount);
+
+		// Click on the checkout button
+		 DriverInit.getDriver().findElement(By.cssSelector("[data-synth='link--checkout']")).click();
+
+		// Verify that the item count in the checkout page matches the expected count
+		int actualItemCount = Integer.parseInt( DriverInit.getDriver().findElement(By.cssSelector(".items-count")).getText());
+		assertEquals(expectedItemCount, actualItemCount);
+
+	}
+		
+		   public void checkoutButtonContainsItemsPrice() {
+			   double actualBasketValue = Double.parseDouble(basketValueElement.getText().replaceAll("[^\\d.]", ""));
+		  System.out.println("Checkout Button Contains Items Price  "+actualBasketValue);
+		   }
+		
+		   public void userClicksOnDrinks() {
+			   
+		   }
+		   
+		   public void addPepsi() {
+			   
+		   }
+
+		
+
+	
+}

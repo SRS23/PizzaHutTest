@@ -1,0 +1,66 @@
+package utilities;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+import stepDefinitions.StepDefinitions;
+
+import java.io.IOException;
+
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.TestWatcher;
+import org.junit.jupiter.api.extension.ExtensionContext.Namespace;
+
+public class TestListener extends CommonFunctions implements TestWatcher {
+    private ExtentReports extent;
+    private ExtentTest test;
+                             
+    CommonFunctions cfs = new CommonFunctions();
+    
+    @Override
+    public void testSuccessful(ExtensionContext context) {
+        test.log(Status.PASS, MarkupHelper.createLabel(context.getDisplayName() + " passed", ExtentColor.GREEN));
+        try {
+			cfs.takeScreenShot();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+
+    @Override
+    public void testFailed(ExtensionContext context, Throwable cause) {
+        test.log(Status.FAIL, MarkupHelper.createLabel(context.getDisplayName() + " failed", ExtentColor.RED));
+        test.fail(cause);
+        try {
+			cfs.takeScreenShot();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+
+    @Override
+    public void testAborted(ExtensionContext context, Throwable cause) {
+        test.log(Status.SKIP, MarkupHelper.createLabel(context.getDisplayName() + " skipped", ExtentColor.YELLOW));
+        test.skip(cause);
+        try {
+			cfs.takeScreenShot();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+
+    public void testStarted(ExtensionContext context) {
+        test = extent.createTest(context.getDisplayName());
+        context.getRoot().getStore(Namespace.GLOBAL).put(ExtentTest.class, test);
+    }
+
+    public void setExtent(ExtentReports extent) {
+        this.extent = extent;
+    }
+}

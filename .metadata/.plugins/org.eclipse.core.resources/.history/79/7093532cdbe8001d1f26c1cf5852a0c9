@@ -1,0 +1,6 @@
+package constants;
+
+public class Constantss {
+
+	public l static final  String pizzaHutUrl = "https://www.pizzahut.co.in";
+}

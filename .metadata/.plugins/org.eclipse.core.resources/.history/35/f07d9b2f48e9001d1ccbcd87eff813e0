@@ -1,0 +1,26 @@
+package testReports;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+import constants.Constantss;
+
+public class PizzaHutExtentReports {
+    protected ExtentReports extent;
+
+    @BeforeClass
+    public void setUp() {
+        // Create Extent Report
+    	ExtentSparkReporter reporter = new ExtentSparkReporter(Constantss.exReport);
+        extent = new ExtentReports();
+        extent.attachReporter(reporter);
+    }
+
+    @AfterClass
+    public void tearDown() {
+        // Flush the report
+        extent.flush();
+    }
+}

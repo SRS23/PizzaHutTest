@@ -1,0 +1,6 @@
+package constants;
+
+public class Constantss {
+
+	public final static String = "https://www.pizzahut.co.in";
+}

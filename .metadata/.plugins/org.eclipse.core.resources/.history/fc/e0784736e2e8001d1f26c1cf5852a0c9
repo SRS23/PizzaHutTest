@@ -1,0 +1,14 @@
+package testReports;
+
+import com.aventstack.extentreports.ExtentReports;
+
+public class PizzaHutJunitExtentReports {
+
+	ExtentReports extent;
+	
+	public void reportSetUp() {
+		
+		ExtentHtmlReporter report = new ExtentHtmlReporter
+	}
+	
+}

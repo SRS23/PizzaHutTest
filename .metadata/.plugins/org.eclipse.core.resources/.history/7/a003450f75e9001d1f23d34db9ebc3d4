@@ -1,0 +1,40 @@
+package utilities;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+import constants.Constantss;
+
+public class GetDataFromExcell extend Constantss {
+		public void getData() throws IOException {
+			
+			String path = Constantss.websiteUrl;
+			FileInputStream fis = new FileInputStream(path);
+			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			XSSFSheet sheet = workbook.getSheetAt(0);
+			Row row = sheet.getRow(3);
+			Cell cell = row.getCell(1);
+			
+			XSSFCell value = sheet.getRow(3).getCell(1);
+			
+			String text = value.toString();
+			
+		}
+}

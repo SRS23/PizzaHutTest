@@ -1,0 +1,6 @@
+package testReports;
+
+public class PizzaHutJunitExtentReports {
+
+	ExtendReports extent;
+}

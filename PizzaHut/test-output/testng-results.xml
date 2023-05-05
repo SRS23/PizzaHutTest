@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="21" passed="21" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-04T14:59:08 IST" name="PizzaHut" finished-at="2023-05-04T15:00:17 IST" duration-ms="68710">
+    <groups>
+    </groups>
+    <test started-at="2023-05-04T14:59:08 IST" name="pizzahut001" finished-at="2023-05-04T15:00:17 IST" duration-ms="68710">
+      <class name="stepDefinitions.PizzaHutTestNGTest">
+        <test-method is-config="true" signature="websiteLinks()[pri:0, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:08 IST" name="websiteLinks" finished-at="2023-05-04T14:59:14 IST" duration-ms="6207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- websiteLinks -->
+        <test-method signature="website_launche_with_url()[pri:1, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:15 IST" name="website_launche_with_url" finished-at="2023-05-04T14:59:18 IST" duration-ms="2941" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- website_launche_with_url -->
+        <test-method signature="set_the_user_delivery_location_as_lulu_mall_bangalore()[pri:2, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:18 IST" name="set_the_user_delivery_location_as_lulu_mall_bangalore" finished-at="2023-05-04T14:59:33 IST" duration-ms="15553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set_the_user_delivery_location_as_lulu_mall_bangalore -->
+        <test-method signature="a_black_color_auto_pop_up_screen_will_be_displayed_close_it()[pri:3, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:33 IST" name="a_black_color_auto_pop_up_screen_will_be_displayed_close_it" finished-at="2023-05-04T14:59:33 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- a_black_color_auto_pop_up_screen_will_be_displayed_close_it -->
+        <test-method signature="click_on_view_all_deals()[pri:4, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:33 IST" name="click_on_view_all_deals" finished-at="2023-05-04T14:59:33 IST" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_view_all_deals -->
+        <test-method signature="enter_delivery_address()[pri:5, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:33 IST" name="enter_delivery_address" finished-at="2023-05-04T14:59:44 IST" duration-ms="10517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enter_delivery_address -->
+        <test-method signature="the_user_is_now_on_the_deals_page_validate_that_the_url_has_text_as_deals()[pri:6, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:44 IST" name="the_user_is_now_on_the_deals_page_validate_that_the_url_has_text_as_deals" finished-at="2023-05-04T14:59:50 IST" duration-ms="6124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- the_user_is_now_on_the_deals_page_validate_that_the_url_has_text_as_deals -->
+        <test-method signature="go_to_sides_and_add_any_item_that_is_below_200()[pri:7, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T14:59:50 IST" name="go_to_sides_and_add_any_item_that_is_below_200" finished-at="2023-05-04T15:00:04 IST" duration-ms="14138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- go_to_sides_and_add_any_item_that_is_below_200 -->
+        <test-method signature="validate_that_the_product_is_added_under_basket_but_checkout_button_price_item_is_still_not_showing()[pri:8, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:04 IST" name="validate_that_the_product_is_added_under_basket_but_checkout_button_price_item_is_still_not_showing" finished-at="2023-05-04T15:00:05 IST" duration-ms="320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_that_the_product_is_added_under_basket_but_checkout_button_price_item_is_still_not_showing -->
+        <test-method signature="navigate_to_the_drinks_page()[pri:9, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:05 IST" name="navigate_to_the_drinks_page" finished-at="2023-05-04T15:00:05 IST" duration-ms="476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_the_drinks_page -->
+        <test-method signature="add_any_two_drinks_so_that_total_cart_pricing_is_more_than_200()[pri:10, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:05 IST" name="add_any_two_drinks_so_that_total_cart_pricing_is_more_than_200" finished-at="2023-05-04T15:00:06 IST" duration-ms="1171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_any_two_drinks_so_that_total_cart_pricing_is_more_than_200 -->
+        <test-method signature="click_on_the_checkout_button_the_user_will_be_navigated_to_the_checkout_page()[pri:11, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:06 IST" name="click_on_the_checkout_button_the_user_will_be_navigated_to_the_checkout_page" finished-at="2023-05-04T15:00:06 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_the_checkout_button_the_user_will_be_navigated_to_the_checkout_page -->
+        <test-method signature="validate_that_the_online_payment_radio_button_is_selected_by_default()[pri:12, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:06 IST" name="validate_that_the_online_payment_radio_button_is_selected_by_default" finished-at="2023-05-04T15:00:11 IST" duration-ms="4341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_that_the_online_payment_radio_button_is_selected_by_default -->
+        <test-method signature="change_the_payment_option_to_cash()[pri:13, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:11 IST" name="change_the_payment_option_to_cash" finished-at="2023-05-04T15:00:11 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- change_the_payment_option_to_cash -->
+        <test-method signature="validate_that_the_i_agree_checkbox_is_checked_by_default()[pri:14, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:11 IST" name="validate_that_the_i_agree_checkbox_is_checked_by_default" finished-at="2023-05-04T15:00:11 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_that_the_i_agree_checkbox_is_checked_by_default -->
+        <test-method signature="enter_name_mobile_and_email_address()[pri:15, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:11 IST" name="enter_name_mobile_and_email_address" finished-at="2023-05-04T15:00:12 IST" duration-ms="746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enter_name_mobile_and_email_address -->
+        <test-method signature="click_on_the_apply_gift_card_link()[pri:16, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:12 IST" name="click_on_the_apply_gift_card_link" finished-at="2023-05-04T15:00:13 IST" duration-ms="914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_the_apply_gift_card_link -->
+        <test-method signature="a_pop_up_should_appear_click_on_the_voucher()[pri:17, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:13 IST" name="a_pop_up_should_appear_click_on_the_voucher" finished-at="2023-05-04T15:00:13 IST" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- a_pop_up_should_appear_click_on_the_voucher -->
+        <test-method signature="give_the_voucher_code_as_and_submit()[pri:18, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:13 IST" name="give_the_voucher_code_as_and_submit" finished-at="2023-05-04T15:00:13 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- give_the_voucher_code_as_and_submit -->
+        <test-method signature="validate_if_an_error_is_coming_that_the_number_is_incorrect()[pri:19, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:13 IST" name="validate_if_an_error_is_coming_that_the_number_is_incorrect" finished-at="2023-05-04T15:00:15 IST" duration-ms="2156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_if_an_error_is_coming_that_the_number_is_incorrect -->
+        <test-method signature="close_the_voucher_pop_up()[pri:20, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:15 IST" name="close_the_voucher_pop_up" finished-at="2023-05-04T15:00:15 IST" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_the_voucher_pop_up -->
+        <test-method signature="the_user_should_again_navigate_to_your_basket_page()[pri:21, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:15 IST" name="the_user_should_again_navigate_to_your_basket_page" finished-at="2023-05-04T15:00:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- the_user_should_again_navigate_to_your_basket_page -->
+        <test-method is-config="true" signature="flushh()[pri:0, instance:stepDefinitions.PizzaHutTestNGTest@121bb45b]" started-at="2023-05-04T15:00:15 IST" name="flushh" finished-at="2023-05-04T15:00:17 IST" duration-ms="1436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushh -->
+      </class> <!-- stepDefinitions.PizzaHutTestNGTest -->
+    </test> <!-- pizzahut001 -->
+  </suite> <!-- PizzaHut -->
+</testng-results>

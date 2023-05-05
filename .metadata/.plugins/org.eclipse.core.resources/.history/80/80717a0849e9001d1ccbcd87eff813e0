@@ -1,0 +1,9 @@
+package constants;
+
+public class Constantss {
+
+	public  static final  String pizzaHutUrl = "https://www.pizzahut.co.in";
+	public static final String exReport = System.getProperty("user.dir") + "\\test-output\\ExtentReportss.html";
+
+	public static final String screenshotLocation = "F:\\svl svs"+Math.random()+"junit.png";
+}

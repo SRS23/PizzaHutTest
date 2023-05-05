@@ -1,0 +1,99 @@
+package pageFactory;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import utilities.CommonFunctions;
+import utilities.DriverInit;
+
+public class PizzaHutPaymentTest {
+
+	CommonFunctions cfs = new CommonFunctions();
+	public  PizzaHutPaymentTest(WebDriver driver) {
+		PageFactory.initElements( driver, this);
+		
+	}
+	
+	@FindBy(xpath = ("//input[@placeholder='Enter your location for delivery']"))
+	WebElement enterLocation ;
+	
+	@FindBy(how = How.XPATH, using = "//button[@data-testid=\"close-offer-collection\"]")
+	WebElement closebutton;
+	
+	@FindBy(xpath="//a[@class='button button--primary button--xl mb-20']") WebElement ViewAllDealsButton;  
+	
+	@FindBy(xpath = "(//button[@class='sc-AxheI bqJhFB'])[13]") WebElement kidsTreat;
+	
+	@FindBy(how = How.XPATH, using="//button[@data-synth=\"link--basket\"]") WebElement addDeal;
+	
+	public void enterDeliverAddress() throws InterruptedException {
+		
+			cfs.scrollWebPage();
+		   
+			
+		   
+		    enterLocation.sendKeys("lulu mall bangalore");
+		    Thread.sleep(5000);
+		    enterLocation.sendKeys(Keys.BACK_SPACE);
+		    enterLocation.sendKeys("e");
+		    Thread.sleep(5000);
+		    enterLocation.sendKeys(Keys.ENTER);
+		    Thread.sleep(5000);
+		  
+		
+	
+}
+
+	public void closeButton() {
+	
+		closebutton.click();
+	
+	}
+	
+	public void viewDealsButton() {
+		ViewAllDealsButton.click();
+	}
+	
+	public void enterDeliverLocation() throws InterruptedException {
+		
+		    enterLocation.sendKeys(Keys.CLEAR);
+		    enterLocation.clear();
+		    enterLocation.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		    enterLocation.sendKeys(Keys.DELETE);
+		    
+		  
+		    enterLocation.sendKeys("Kadapa Railway Station");
+		    enterLocation.sendKeys(Keys.BACK_SPACE);
+		    enterLocation.sendKeys(Keys.BACK_SPACE);
+		    Thread.sleep(5000);
+		    enterLocation.sendKeys("on");
+		    Thread.sleep(5000);
+		    enterLocation.sendKeys(Keys.ENTER);
+		
+	}
+	
+	public void urlDealstest() {
+		String currentUrl = DriverInit.getDriver().getCurrentUrl();
+		String expUrl = "deals";
+		Assert.assertTrue(currentUrl.contains(expUrl), "currentUrl does not contain deals");
+		System.out.println(currentUrl);
+		
+	}
+	
+	public void clickKidsTreatDeal149() {
+		kidsTreat.click();
+	}
+	public void addDealToBasket() {
+		addDeal.click();
+	}
+}

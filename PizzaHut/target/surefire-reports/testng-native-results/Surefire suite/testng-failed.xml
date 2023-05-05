@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="stepDefinitions.PizzaHutTestNGTest">
+        <methods>
+          <include name="validate_that_the_i_agree_checkbox_is_checked_by_default"/>
+          <include name="enter_name_mobile_and_email_address"/>
+          <include name="validate_if_an_error_is_coming_that_the_number_is_incorrect"/>
+          <include name="navigate_to_the_drinks_page"/>
+          <include name="change_the_payment_option_to_cash"/>
+          <include name="click_on_the_checkout_button_the_user_will_be_navigated_to_the_checkout_page"/>
+          <include name="websiteLinks"/>
+          <include name="add_any_two_drinks_so_that_total_cart_pricing_is_more_than_200"/>
+          <include name="close_the_voucher_pop_up"/>
+          <include name="give_the_voucher_code_as_and_submit"/>
+          <include name="the_user_is_now_on_the_deals_page_validate_that_the_url_has_text_as_deals"/>
+          <include name="validate_that_the_online_payment_radio_button_is_selected_by_default"/>
+          <include name="flushh"/>
+          <include name="validate_that_the_product_is_added_under_basket_but_checkout_button_price_item_is_still_not_showing"/>
+          <include name="go_to_sides_and_add_any_item_that_is_below_200"/>
+          <include name="click_on_the_apply_gift_card_link"/>
+          <include name="set_the_user_delivery_location_as_lulu_mall_bangalore"/>
+          <include name="a_pop_up_should_appear_click_on_the_voucher"/>
+        </methods>
+      </class> <!-- stepDefinitions.PizzaHutTestNGTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

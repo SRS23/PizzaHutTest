@@ -1,0 +1,23 @@
+package testReports;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
+public class PizzaHutJunitExtentReports {
+
+	ExtentReports extent;
+	
+	public void reportSetUp() {
+		
+		 ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("test-output/extent-report.html");
+	        extent = new ExtentReports();
+	        extent.attachReporter(htmlReporter);
+	    }
+
+	    @AfterClass
+	    public void tearDown() {
+	        // Flush the report
+	        extent.flush();
+	    }
+	
+}

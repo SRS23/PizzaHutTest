@@ -1,0 +1,76 @@
+package utilities;
+import java.io.IOException;
+
+import org.testng.ITestContext;
+import utilities.CommonFunctions;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import constants.Constantss;
+
+public class TestListener extends CommonFunctions implements ITestListener {
+ 
+	CommonFunctions cfs1 = new CommonFunctions();
+      Constantss obj = new Constantss(); 
+      
+      
+    @Override
+	public void onTestStart(ITestResult result) {
+    	String ssLocation = obj.screenshotLocation;
+		try {
+			cfs1.takeScreenShot();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("The ScreenShot Location is: "+ssLocation);
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+	
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onTestFailure(result);
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onTestSkipped(result);
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+	}
+
+	@Override
+	public void onTestFailedWithTimeout(ITestResult result) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onTestFailedWithTimeout(result);
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onStart(context);
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+		ITestListener.super.onFinish(context);
+	}
+
+	CommonFunctions cfs = new CommonFunctions();
+
+	
+
+		
+    
+  }
+

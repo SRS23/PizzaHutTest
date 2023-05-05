@@ -1,0 +1,75 @@
+package pageFactory;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.DriverInit;
+import utilities.CommonFunctions;
+
+public class PizzaHutPaymentTest {
+
+	CommonFunctions cfs = new CommonFunctions();
+	public  PizzaHutPaymentTest(WebDriver driver) {
+		PageFactory.initElements( driver, this);
+		
+	}
+	
+	@FindBy(xpath = ("//input[@placeholder='Enter your location for delivery']"))
+	WebElement enterLocation ;
+	
+	@FindBy(how = How.XPATH, using = "//button[@data-testid=\"close-offer-collection\"]")
+	WebElement closebutton;
+	
+	@FindBy(xpath="//a[@class='button button--primary button--xl mb-20']") WebElement ViewAllDealsButton;  
+	
+	public void enterDeliverAddress() throws InterruptedException {
+		
+			cfs.scrollWebPage();
+		   
+		    enterLocation.sendKeys("lulu mall bangalore");
+		    enterLocation.sendKeys(Keys.BACK_SPACE);
+		    Thread.sleep(5000);
+		    enterLocation.sendKeys(Keys.BACK_SPACE);
+		    enterLocation.sendKeys("re");
+		    Thread.sleep(5000);
+		    enterLocation.sendKeys(Keys.ENTER);
+		  
+		
+	
+}
+
+	public void closeButton() {
+	
+		closebutton.click();
+	
+	}
+	
+	public void viewDealsButton() {
+		ViewAllDealsButton.click();
+	}
+	
+	public void enterDeliverLocation() throws InterruptedException {
+		enterLocation.sendKeys(Keys.BACK_SPACE);
+		for (int i=0; i<100; i++) {
+			enterLocation.sendKeys(Keys.BACK_SPACE);
+		}
+		
+		enterLocation.sendKeys("Kadapa Rtc Bustation");
+		Thread.sleep(2000);
+		enterLocation.sendKeys(Keys.BACK_SPACE);
+		enterLocation.sendKeys(Keys.BACK_SPACE);
+		enterLocation.sendKeys("on");
+		Thread.sleep(2000);
+		enterLocation.sendKeys(Keys.ENTER);
+		
+	}
+}
