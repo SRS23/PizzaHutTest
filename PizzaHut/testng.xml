@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="PizzaHut">
   <test thread-count="5" name="pizzahut001">
-	  <parameter name="VoucherCode" value="12345"></parameter>
+	
 	  
     <classes>
       <class name="stepDefinitions.PizzaHutTestNGTest"/>
