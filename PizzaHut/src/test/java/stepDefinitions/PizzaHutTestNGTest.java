@@ -190,9 +190,8 @@ public class PizzaHutTestNGTest extends PizzaHutExtentReports{
 		}
 		
 		@Test(priority=18)
-		@Parameters("VoucherCode")
 		@Then("Give the Voucher code as 12345 and submit")
-		public void give_the_voucher_code_as_and_submit(String VoucherCode) {
+		public void give_the_voucher_code_as_and_submit() {
 			
 			CreateTest1("Give the Voucher code as 12345 and submit");
 			hut.enterVoucherCode();
